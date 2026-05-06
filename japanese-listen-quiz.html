@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日文聽力練習選擇題</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #fff0f5 0%, #fcf7ff 35%, #f8f4fb 100%);
+      color: #1f2937;
+    }
+    .page-shell {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 20px 36px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #9c5de5 0%, #5a189a 100%);
+      border-radius: 28px;
+      color: #fff;
+      padding: 32px 28px;
+      box-shadow: 0 18px 50px rgba(20, 20, 70, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -28px;
+      right: -52px;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.14);
+    }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 2.75vw, 3rem);
+      line-height: 1.05;
+    }
+    .hero p {
+      max-width: 720px;
+      margin: 0;
+      font-size: 1.05rem;
+      opacity: 0.92;
+      line-height: 1.75;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 28px;
+      margin-top: -26px;
+      box-shadow: 0 20px 60px rgba(15, 39, 79, 0.08);
+      backdrop-filter: blur(8px);
+    }
+    .controls {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    button {
+      border: none;
+      border-radius: 14px;
+      padding: 14px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #9c5de5 0%, #6a4c93 100%);
+      transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+      box-shadow: 0 10px 24px rgba(156, 93, 229, 0.18);
+    }
+    button:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+    }
+    .options {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .option-btn {
+      background: #f8f3ff;
+      color: #1f2340;
+      text-align: left;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid transparent;
+      box-shadow: inset 0 0 0 1px rgba(131, 88, 186, 0.14);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .option-btn:hover {
+      background: #eee5ff;
+      transform: translateY(-1px);
+      border-color: #c7b3ee;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1rem;
+      min-height: 1.2em;
+      font-weight: 600;
+    }
+    .result.correct { color: #0f7b3b; }
+    .result.wrong { color: #be1e2d; }
+    .progress {
+      margin-top: 10px;
+      font-size: .95rem;
+      color: #475569;
+    }
+    a.back-link {
+      display: inline-block;
+      margin-top: 22px;
+      color: #5a189a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <section class="hero">
+      <h1>日文聽力練習</h1>
+      <p>使用生活化日常句子練習聽力。按「播放句子」先聽日文，再從中文選項中選出正確意思。</p>
+    </section>
+    <div class="card">
+      <div class="controls">
+        <button id="playBtn">播放句子</button>
+        <button id="nextBtn">下一題</button>
+      </div>
+      <div class="progress" id="progress"></div>
+      <div class="options" id="options"></div>
+      <div class="result" id="result"></div>
+      <a class="back-link" href="index.html">← 回到語言選單</a>
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      { text: 'おはようございます。', choices: ['早安。', '你晚上好。', '謝謝你。'], answer: 0 },
+      { text: 'すみません、駅はどこですか？', choices: ['請問車站在哪裡？', '你要去哪裡？', '我喜歡這個地方。'], answer: 0 },
+      { text: 'これはいくらですか？', choices: ['這個多少錢？', '你想吃什麼？', '我不懂日文。'], answer: 0 },
+      { text: 'ちょっと待ってください。', choices: ['請等一下。', '我馬上去。', '我沒有時間。'], answer: 0 },
+      { text: '今日は天気がいいですね。', choices: ['今天天氣很好。', '我今天很忙。', '請給我一杯水。'], answer: 0 },
+      { text: '日本語が少し話せます。', choices: ['我會說一點日文。', '我不會說日文。', '我正在學中文。'], answer: 0 },
+      { text: 'どこで食べますか？', choices: ['在哪裡吃？', '你喜歡吃甜點嗎？', '我還沒吃飯。'], answer: 0 },
+      { text: '今晩は何をしますか？', choices: ['今晚要做什麼？', '你今天早上好嗎？', '這是我的手機。'], answer: 0 },
+      { text: 'ゆっくり話してください。', choices: ['請慢慢講。', '我聽不懂。', '這個很好吃。'], answer: 0 },
+      { text: 'ありがとうございます。', choices: ['謝謝你。', '對不起。', '請再說一次。'], answer: 0 }
+    ];
+
+    let currentIndex = 0;
+    let answered = false;
+
+    const playBtn = document.getElementById('playBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const optionsContainer = document.getElementById('options');
+    const resultEl = document.getElementById('result');
+    const progressEl = document.getElementById('progress');
+
+    function updateProgress() {
+      progressEl.textContent = `題目 ${currentIndex + 1} / ${questions.length}`;
+    }
+
+    function loadQuestion() {
+      const question = questions[currentIndex];
+      optionsContainer.innerHTML = '';
+      resultEl.textContent = '';
+      answered = false;
+
+      question.choices.forEach((choice, index) => {
+        const button = document.createElement('button');
+        button.className = 'option-btn';
+        button.textContent = choice;
+        button.addEventListener('click', () => selectAnswer(index));
+        optionsContainer.appendChild(button);
+      });
+      updateProgress();
+    }
+
+    function selectAnswer(choiceIndex) {
+      if (answered) return;
+      answered = true;
+      const question = questions[currentIndex];
+      if (choiceIndex === question.answer) {
+        resultEl.textContent = '答對了！✅';
+        resultEl.className = 'result correct';
+      } else {
+        resultEl.textContent = `答錯了。正確答案是：「${question.choices[question.answer]}」。`;
+        resultEl.className = 'result wrong';
+      }
+    }
+
+    function speakSentence() {
+      const question = questions[currentIndex];
+      if (!('speechSynthesis' in window)) {
+        alert('此瀏覽器不支援語音合成，請使用 Chrome 或 Edge。');
+        return;
+      }
+      const utterance = new SpeechSynthesisUtterance(question.text);
+      utterance.lang = 'ja-JP';
+      speechSynthesis.cancel();
+      speechSynthesis.speak(utterance);
+    }
+
+    playBtn.addEventListener('click', speakSentence);
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % questions.length;
+      loadQuestion();
+    });
+
+    loadQuestion();
+  </script>
+</body>
+</html>

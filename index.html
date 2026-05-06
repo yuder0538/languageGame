@@ -2,19 +2,76 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=german-listen-quiz.html">
-  <title>正在前往德文聽力練習</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>語言聽力遊戲選單</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f5f7fb; color: #333; }
-    .message { text-align: center; padding: 24px; max-width: 420px; }
-    a { color: #3b74e5; text-decoration: none; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #f3f6ff 0%, #eef4fb 40%, #f8fcff 100%);
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      color: #1f2d3d;
+    }
+    .menu-card {
+      width: min(700px, calc(100% - 32px));
+      padding: 32px;
+      border-radius: 28px;
+      background: #ffffff;
+      box-shadow: 0 22px 60px rgba(15, 39, 79, 0.12);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 3vw, 3rem);
+      color: #273c75;
+    }
+    p {
+      margin: 0 0 24px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #475569;
+    }
+    .choices {
+      display: grid;
+      gap: 16px;
+    }
+    .lang-btn {
+      display: block;
+      width: 100%;
+      padding: 16px 18px;
+      border: none;
+      border-radius: 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #4b8ceb 0%, #2d6cd8 100%);
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .lang-btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+    }
+    .hint {
+      margin-top: 24px;
+      font-size: .95rem;
+      color: #64748b;
+    }
   </style>
 </head>
 <body>
-  <div class="message">
-    <h1>正在前往德文聽力練習</h1>
-    <p>如果沒有自動跳轉，請點選下面連結：</p>
-    <p><a href="german-listen-quiz.html">前往德文聽力遊戲</a></p>
+  <div class="menu-card">
+    <h1>選擇語言練習</h1>
+    <p>歡迎來到聽力練習遊戲！請先選擇你想挑戰的語言，然後進行聽句子並選擇中文翻譯。</p>
+    <div class="choices">
+      <a class="lang-btn" href="german-listen-quiz.html">德文聽力練習</a>
+      <a class="lang-btn" style="background: linear-gradient(135deg, #9c5de5 0%, #6a4c93 100%);" href="japanese-listen-quiz.html">日文聽力練習</a>
+    </div>
+    <p class="hint">如果你是從 GitHub 倉庫頁面開啟，請確保直接連到 `index.html`，才能看到語言選單。</p>
   </div>
 </body>
 </html>
