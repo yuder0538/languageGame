@@ -134,7 +134,7 @@
 
   <script>
     const questions = [
-      { text: 'Guten Morgen! Wie geht es dir heute am Morgen, nachdem du so früh aufgestanden bist?', choices: ['你今天早上過得如何？', '你要去哪裡？', '我喜歡這件衣服。'], answer: 0 },
+      { text: 'Guten Morgen! Wie geht es dir heute am Morgen, nachdem du so früh aufgestanden bist?', choices: ['你今天早上過得如何？', '你今天晚上有空嗎？', '你喜歡這件衣服嗎？'], answer: 0 },
       { text: 'Ich brauche ein großes Glas Wasser, bitte, weil ich sehr durstig bin und es draußen heiß ist.', choices: ['請給我一大杯水，因為我很渴而且外面很熱。', '這個多少錢？', '我有一隻貓。'], answer: 0 },
       { text: 'Wo ist die nächste U-Bahn-Station, die in Richtung Stadtzentrum fährt und nicht zu weit entfernt ist?', choices: ['最近開往市中心、而且不太遠的地鐵站在哪裡？', '你喜歡吃什麼？', '明天要不要見面？'], answer: 0 },
       { text: 'Kannst du mir helfen, diesen Weg zum Hotel zu finden, weil ich mich hier nicht gut auskenne?', choices: ['你可以幫我找到到飯店的路嗎？我對這裡不是很熟。', '你想喝茶還是咖啡？', '我的手機不見了。'], answer: 0 },
@@ -150,12 +150,53 @@
     let currentQuestion = null;
     let currentIndex = 0;
     let answered = false;
+    let lives = 3;
 
     const playBtn = document.getElementById('playBtn');
     const nextBtn = document.getElementById('nextBtn');
     const optionsContainer = document.getElementById('options');
     const resultEl = document.getElementById('result');
     const progressEl = document.getElementById('progress');
+
+    // Audio context for sound effects
+    let audioContext;
+    function initAudio() {
+      if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      }
+    }
+
+    function playSound(frequency, duration, type = 'sine') {
+      initAudio();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+
+      oscillator.frequency.value = frequency;
+      oscillator.type = type;
+
+      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
+
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + duration);
+    }
+
+    function playCorrectSound() {
+      playSound(523.25, 0.3); // C5
+      setTimeout(() => playSound(659.25, 0.3), 100); // E5
+      setTimeout(() => playSound(783.99, 0.5), 200); // G5
+    }
+
+    function playWrongSound() {
+      playSound(220, 0.5, 'sawtooth'); // A3
+    }
+
+    function playClickSound() {
+      playSound(800, 0.1);
+    }
 
     function shuffleArray(arr) {
       for (let i = arr.length - 1; i > 0; i--) {
@@ -168,11 +209,17 @@
     function startQuiz() {
       questionPool = shuffleArray(questions.slice());
       currentIndex = 0;
+      lives = 3;
+      updateLivesDisplay();
       loadNextQuestion();
     }
 
     function updateProgress() {
-      progressEl.textContent = `題目 ${currentIndex} / ${questions.length}`;
+      progressEl.textContent = `題目 ${currentIndex} / ${questions.length} | 生命: ${lives}`;
+    }
+
+    function updateLivesDisplay() {
+      updateProgress();
     }
 
     function loadNextQuestion() {
@@ -187,25 +234,45 @@
       resultEl.textContent = '';
       answered = false;
 
-      currentQuestion.choices.forEach((choice, index) => {
+      // Shuffle choices and track correct answer
+      const shuffledChoices = shuffleArray(currentQuestion.choices.slice());
+      const correctIndex = shuffledChoices.indexOf(currentQuestion.choices[currentQuestion.answer]);
+
+      shuffledChoices.forEach((choice, index) => {
         const button = document.createElement('button');
         button.className = 'option-btn';
         button.textContent = choice;
-        button.addEventListener('click', () => selectAnswer(index));
+        button.addEventListener('click', () => {
+          playClickSound();
+          selectAnswer(index === correctIndex);
+        });
         optionsContainer.appendChild(button);
       });
       updateProgress();
     }
 
-    function selectAnswer(choiceIndex) {
+    function selectAnswer(isCorrect) {
       if (answered) return;
       answered = true;
-      if (choiceIndex === currentQuestion.answer) {
+
+      if (isCorrect) {
         resultEl.textContent = '答對了！✅';
         resultEl.className = 'result correct';
+        playCorrectSound();
       } else {
         resultEl.textContent = `答錯了。正確答案是：「${currentQuestion.choices[currentQuestion.answer]}」。`;
         resultEl.className = 'result wrong';
+        playWrongSound();
+        lives--;
+        updateLivesDisplay();
+
+        if (lives <= 0) {
+          setTimeout(() => {
+            alert('生命用完了！重新開始遊戲。');
+            startQuiz();
+          }, 2000);
+          return;
+        }
       }
     }
 
@@ -220,8 +287,14 @@
       speechSynthesis.speak(utterance);
     }
 
-    playBtn.addEventListener('click', speakSentence);
-    nextBtn.addEventListener('click', loadNextQuestion);
+    playBtn.addEventListener('click', () => {
+      playClickSound();
+      speakSentence();
+    });
+    nextBtn.addEventListener('click', () => {
+      playClickSound();
+      loadNextQuestion();
+    });
 
     startQuiz();
   </script>
