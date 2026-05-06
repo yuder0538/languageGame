@@ -134,19 +134,20 @@
 
   <script>
     const questions = [
-      { text: 'Guten Morgen! Wie geht es dir heute am Morgen?', choices: ['你今天早上過得如何？', '你要去哪裡？', '我喜歡這件衣服。'], answer: 0 },
-      { text: 'Ich brauche ein großes Glas Wasser, bitte, weil mir sehr durstig ist.', choices: ['請給我一大杯水，因為我很渴。', '這個多少錢？', '我有一隻貓。'], answer: 0 },
-      { text: 'Wo ist die nächste U-Bahn-Station, die in Richtung Stadtzentrum fährt?', choices: ['最近開往市中心的地鐵站在哪裡？', '你喜歡吃什麼？', '明天要不要見面？'], answer: 0 },
-      { text: 'Kannst du mir helfen, diesen Weg zum Hotel zu finden?', choices: ['你可以幫我找到到飯店的路嗎？', '你想喝茶還是咖啡？', '我的手機不見了。'], answer: 0 },
-      { text: 'Ich habe heute Abend Zeit, wenn du dich treffen möchtest.', choices: ['我今晚有時間，如果你想見面。', '我不想出門。', '我住在台北。'], answer: 0 },
-      { text: 'Das Essen schmeckt sehr gut, besonders die Suppe ist sehr lecker.', choices: ['這餐很好吃，特別是湯很美味。', '這件衣服很便宜。', '我明天很忙。'], answer: 0 },
-      { text: 'Bitte gib mir deinen Namen und deine Telefonnummer.', choices: ['請告訴我你的名字和電話。', '你要幾點出發？', '我已經吃飽了。'], answer: 0 },
-      { text: 'Ich fahre mit dem Fahrrad zur Arbeit, weil es schnell und gesund ist.', choices: ['我騎腳踏車上班，因為又快又健康。', '我今天要去購物。', '我有一個弟弟。'], answer: 0 },
-      { text: 'Heute ist das Wetter sehr schön, also wollen wir im Park spazieren gehen.', choices: ['今天天氣很好，我們去公園散步吧。', '我正在寫一封信。', '你會說中文嗎？'], answer: 0 },
-      { text: 'Entschuldigung, ich habe eine Frage zum Busfahrplan für morgen.', choices: ['不好意思，我有一個關於明天公車時刻的問題。', '請問廁所在哪裡？', '你喜歡看電影嗎？'], answer: 0 }
+      { text: 'Guten Morgen! Wie geht es dir heute am Morgen, nachdem du so früh aufgestanden bist?', choices: ['你今天早上過得如何？', '你要去哪裡？', '我喜歡這件衣服。'], answer: 0 },
+      { text: 'Ich brauche ein großes Glas Wasser, bitte, weil ich sehr durstig bin und es draußen heiß ist.', choices: ['請給我一大杯水，因為我很渴而且外面很熱。', '這個多少錢？', '我有一隻貓。'], answer: 0 },
+      { text: 'Wo ist die nächste U-Bahn-Station, die in Richtung Stadtzentrum fährt und nicht zu weit entfernt ist?', choices: ['最近開往市中心、而且不太遠的地鐵站在哪裡？', '你喜歡吃什麼？', '明天要不要見面？'], answer: 0 },
+      { text: 'Kannst du mir helfen, diesen Weg zum Hotel zu finden, weil ich mich hier nicht gut auskenne?', choices: ['你可以幫我找到到飯店的路嗎？我對這裡不是很熟。', '你想喝茶還是咖啡？', '我的手機不見了。'], answer: 0 },
+      { text: 'Ich habe heute Abend Zeit, wenn du dich treffen möchtest, aber ich kann nicht zu spät bleiben.', choices: ['我今晚有時間，如果你想見面，但我不能待太晚。', '我不想出門。', '我住在台北。'], answer: 0 },
+      { text: 'Das Essen schmeckt sehr gut, besonders die Suppe und das Brot, das frisch gebacken wurde.', choices: ['這餐很好吃，特別是湯和剛烤好的麵包。', '這件衣服很便宜。', '我明天很忙。'], answer: 0 },
+      { text: 'Bitte gib mir deinen Namen und deine Telefonnummer, falls wir uns später noch einmal treffen möchten.', choices: ['請告訴我你的名字和電話，萬一天氣好我們再見面。', '你要幾點出發？', '我已經吃飽了。'], answer: 0 },
+      { text: 'Ich fahre mit dem Fahrrad zur Arbeit, weil es schnell und gesund ist und ich die frische Luft mag.', choices: ['我騎腳踏車上班，因為又快又健康，而且我喜歡新鮮空氣。', '我今天要去購物。', '我有一個弟弟。'], answer: 0 },
+      { text: 'Heute ist das Wetter sehr schön, also wollen wir im Park spazieren gehen und vielleicht ein Eis essen.', choices: ['今天天氣很好，我們去公園散步，或許還可以吃冰淇淋。', '我正在寫一封信。', '你會說中文嗎？'], answer: 0 },
+      { text: 'Entschuldigung, ich habe eine Frage zum Busfahrplan für morgen, weil ich früh am Flughafen sein muss.', choices: ['不好意思，我有一個關於明天公車時刻的問題，因為我必須很早到機場。', '請問廁所在哪裡？', '你喜歡看電影嗎？'], answer: 0 }
     ];
 
-    let questionOrder = [];
+    let questionPool = [];
+    let currentQuestion = null;
     let currentIndex = 0;
     let answered = false;
 
@@ -161,26 +162,32 @@
         const j = Math.floor(Math.random() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
       }
+      return arr;
     }
 
     function startQuiz() {
-      questionOrder = questions.slice();
-      shuffleArray(questionOrder);
+      questionPool = shuffleArray(questions.slice());
       currentIndex = 0;
-      loadQuestion();
+      loadNextQuestion();
     }
 
     function updateProgress() {
-      progressEl.textContent = `題目 ${currentIndex + 1} / ${questionOrder.length}`;
+      progressEl.textContent = `題目 ${currentIndex} / ${questions.length}`;
     }
 
-    function loadQuestion() {
-      const question = questionOrder[currentIndex];
+    function loadNextQuestion() {
+      if (questionPool.length === 0) {
+        questionPool = shuffleArray(questions.slice());
+        currentIndex = 0;
+      }
+
+      currentQuestion = questionPool.pop();
+      currentIndex += 1;
       optionsContainer.innerHTML = '';
       resultEl.textContent = '';
       answered = false;
 
-      question.choices.forEach((choice, index) => {
+      currentQuestion.choices.forEach((choice, index) => {
         const button = document.createElement('button');
         button.className = 'option-btn';
         button.textContent = choice;
@@ -193,33 +200,28 @@
     function selectAnswer(choiceIndex) {
       if (answered) return;
       answered = true;
-      const question = questionOrder[currentIndex];
-      if (choiceIndex === question.answer) {
+      if (choiceIndex === currentQuestion.answer) {
         resultEl.textContent = '答對了！✅';
         resultEl.className = 'result correct';
       } else {
-        resultEl.textContent = `答錯了。正確答案是：「${question.choices[question.answer]}」。`;
+        resultEl.textContent = `答錯了。正確答案是：「${currentQuestion.choices[currentQuestion.answer]}」。`;
         resultEl.className = 'result wrong';
       }
     }
 
     function speakSentence() {
-      const question = questionOrder[currentIndex];
       if (!('speechSynthesis' in window)) {
         alert('此瀏覽器不支援語音合成，請使用 Chrome 或 Edge。');
         return;
       }
-      const utterance = new SpeechSynthesisUtterance(question.text);
+      const utterance = new SpeechSynthesisUtterance(currentQuestion.text);
       utterance.lang = 'de-DE';
       speechSynthesis.cancel();
       speechSynthesis.speak(utterance);
     }
 
     playBtn.addEventListener('click', speakSentence);
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % questionOrder.length;
-      loadQuestion();
-    });
+    nextBtn.addEventListener('click', loadNextQuestion);
 
     startQuiz();
   </script>
