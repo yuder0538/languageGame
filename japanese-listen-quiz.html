@@ -84,6 +84,7 @@
       display: grid;
       gap: 14px;
       margin-top: 18px;
+      grid-auto-rows: minmax(72px, auto);
     }
     .option-btn {
       background: #f8f3ff;
@@ -98,6 +99,7 @@
       display: flex;
       align-items: center;
       white-space: normal;
+      line-height: 1.5;
     }
     .option-btn:hover {
       background: #eee5ff;
@@ -172,17 +174,17 @@
 
     // Audio context for sound effects
     let audioContext;
-    function initAudio() {
+    async function initAudio() {
       if (!audioContext) {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
       }
       if (audioContext.state === 'suspended') {
-        audioContext.resume().catch(() => {});
+        await audioContext.resume().catch(() => {});
       }
     }
 
-    function playSound(frequency, duration, type = 'sine') {
-      initAudio();
+    async function playSound(frequency, duration, type = 'sine') {
+      await initAudio();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
 
@@ -210,7 +212,7 @@
     }
 
     function playClickSound() {
-      playSound(800, 0.1);
+      playSound(800, 0.1).catch(() => {});
     }
 
     function shuffleArray(arr) {
@@ -296,8 +298,17 @@
         alert('此瀏覽器不支援語音合成，請使用 Chrome 或 Edge。');
         return;
       }
+      const voices = speechSynthesis.getVoices();
+      if (!voices.length) {
+        speechSynthesis.onvoiceschanged = () => {
+          speakSentence();
+        };
+        return;
+      }
       const utterance = new SpeechSynthesisUtterance(currentQuestion.text);
       utterance.lang = 'ja-JP';
+      utterance.volume = 1;
+      utterance.rate = 0.95;
       speechSynthesis.cancel();
       speechSynthesis.speak(utterance);
     }
