@@ -94,6 +94,10 @@
       border: 1px solid transparent;
       box-shadow: inset 0 0 0 1px rgba(81, 116, 206, 0.12);
       transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      white-space: normal;
     }
     .option-btn:hover {
       background: #e6efff;
@@ -163,6 +167,9 @@
     function initAudio() {
       if (!audioContext) {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioContext.state === 'suspended') {
+        audioContext.resume().catch(() => {});
       }
     }
 
