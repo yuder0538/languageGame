@@ -126,7 +126,7 @@
   <div class="page-shell">
     <section class="hero">
       <h1>日文聽力練習</h1>
-      <p>使用生活化日常句子練習聽力。按「播放句子」先聽日文，再從中文選項中選出正確意思。</p>
+      <p>使用生活化日常句子練習聽力。按「播放句子」先聽日文，再從中文選項中選出正確意思。每次打開題目順序會隨機打亂，增加挑戰性。</p>
     </section>
     <div class="card">
       <div class="controls">
@@ -142,18 +142,19 @@
 
   <script>
     const questions = [
-      { text: 'おはようございます。', choices: ['早安。', '你晚上好。', '謝謝你。'], answer: 0 },
-      { text: 'すみません、駅はどこですか？', choices: ['請問車站在哪裡？', '你要去哪裡？', '我喜歡這個地方。'], answer: 0 },
-      { text: 'これはいくらですか？', choices: ['這個多少錢？', '你想吃什麼？', '我不懂日文。'], answer: 0 },
-      { text: 'ちょっと待ってください。', choices: ['請等一下。', '我馬上去。', '我沒有時間。'], answer: 0 },
-      { text: '今日は天気がいいですね。', choices: ['今天天氣很好。', '我今天很忙。', '請給我一杯水。'], answer: 0 },
-      { text: '日本語が少し話せます。', choices: ['我會說一點日文。', '我不會說日文。', '我正在學中文。'], answer: 0 },
-      { text: 'どこで食べますか？', choices: ['在哪裡吃？', '你喜歡吃甜點嗎？', '我還沒吃飯。'], answer: 0 },
-      { text: '今晩は何をしますか？', choices: ['今晚要做什麼？', '你今天早上好嗎？', '這是我的手機。'], answer: 0 },
-      { text: 'ゆっくり話してください。', choices: ['請慢慢講。', '我聽不懂。', '這個很好吃。'], answer: 0 },
-      { text: 'ありがとうございます。', choices: ['謝謝你。', '對不起。', '請再說一次。'], answer: 0 }
+      { text: 'おはようございます、今日はいい天気ですね。', choices: ['早安，今天是個好天氣。', '你今天晚上有空嗎？', '謝謝你。'], answer: 0 },
+      { text: 'すみません、駅はどこですか？できれば急いでいます。', choices: ['請問車站在哪裡？我有點急。', '你要去哪裡？', '我喜歡這個地方。'], answer: 0 },
+      { text: 'これはいくらですか？カードで払えますか？', choices: ['這個多少錢？可以刷卡嗎？', '你想吃什麼？', '我不懂日文。'], answer: 0 },
+      { text: 'ちょっと待ってください、今電話が終わります。', choices: ['請等一下，我現在結束電話。', '我馬上去。', '我沒有時間。'], answer: 0 },
+      { text: '今日は天気がいいですね、午後に公園へ行きませんか？', choices: ['今天天氣很好，下午要不要去公園？', '我今天很忙。', '請給我一杯水。'], answer: 0 },
+      { text: '日本語が少し話せますが、まだ上手ではありません。', choices: ['我會說一點日文，但還不太好。', '我不會說日文。', '我正在學中文。'], answer: 0 },
+      { text: 'どこで食べますか？おすすめの店がありますか？', choices: ['我們在哪裡吃？有推薦的店嗎？', '你喜歡吃甜點嗎？', '我還沒吃飯。'], answer: 0 },
+      { text: '今晩は何をしますか？映画を見に行きませんか？', choices: ['今晚要做什麼？要不要去看電影？', '你今天早上好嗎？', '這是我的手機。'], answer: 0 },
+      { text: 'ゆっくり話してください、まだよく聞き取れません。', choices: ['請慢慢講，我還聽不太懂。', '我聽不懂。', '這個很好吃。'], answer: 0 },
+      { text: 'ありがとうございます、あなたの助けに本当に感謝します。', choices: ['謝謝你，我真的很感謝你的幫助。', '對不起。', '請再說一次。'], answer: 0 }
     ];
 
+    let questionOrder = [];
     let currentIndex = 0;
     let answered = false;
 
@@ -163,12 +164,26 @@
     const resultEl = document.getElementById('result');
     const progressEl = document.getElementById('progress');
 
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+
+    function startQuiz() {
+      questionOrder = questions.slice();
+      shuffleArray(questionOrder);
+      currentIndex = 0;
+      loadQuestion();
+    }
+
     function updateProgress() {
-      progressEl.textContent = `題目 ${currentIndex + 1} / ${questions.length}`;
+      progressEl.textContent = `題目 ${currentIndex + 1} / ${questionOrder.length}`;
     }
 
     function loadQuestion() {
-      const question = questions[currentIndex];
+      const question = questionOrder[currentIndex];
       optionsContainer.innerHTML = '';
       resultEl.textContent = '';
       answered = false;
@@ -186,7 +201,7 @@
     function selectAnswer(choiceIndex) {
       if (answered) return;
       answered = true;
-      const question = questions[currentIndex];
+      const question = questionOrder[currentIndex];
       if (choiceIndex === question.answer) {
         resultEl.textContent = '答對了！✅';
         resultEl.className = 'result correct';
@@ -197,7 +212,7 @@
     }
 
     function speakSentence() {
-      const question = questions[currentIndex];
+      const question = questionOrder[currentIndex];
       if (!('speechSynthesis' in window)) {
         alert('此瀏覽器不支援語音合成，請使用 Chrome 或 Edge。');
         return;
@@ -210,11 +225,11 @@
 
     playBtn.addEventListener('click', speakSentence);
     nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % questions.length;
+      currentIndex = (currentIndex + 1) % questionOrder.length;
       loadQuestion();
     });
 
-    loadQuestion();
+    startQuiz();
   </script>
 </body>
 </html>

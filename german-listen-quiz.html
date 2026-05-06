@@ -119,7 +119,7 @@
   <div class="page-shell">
     <section class="hero">
       <h1>德文聽力練習</h1>
-      <p>用簡單日常句子練習德語聽力，按「播放句子」聽德文，再從中文選項中選出正確意思。適合初學者，題目不重複。</p>
+      <p>用簡單日常句子練習德語聽力，按「播放句子」聽德文，再從中文選項中選出正確意思。每次打開題目順序會隨機打亂，不容易重複。</p>
     </section>
     <div class="card">
       <div class="controls">
@@ -134,18 +134,19 @@
 
   <script>
     const questions = [
-      { text: 'Guten Morgen! Wie geht es dir?', choices: ['你今天好嗎？', '你要去哪裡？', '我喜歡這件衣服。'], answer: 0 },
-      { text: 'Ich brauche ein Glas Wasser, bitte.', choices: ['請給我一杯水。', '這個多少錢？', '我有一隻貓。'], answer: 0 },
-      { text: 'Wo ist die nächste U-Bahn-Station?', choices: ['最近的地鐵站在哪裡？', '你喜歡吃什麼？', '明天要不要見面？'], answer: 0 },
-      { text: 'Kannst du mir helfen?', choices: ['你可以幫我嗎？', '你想喝茶還是咖啡？', '我的手機不見了。'], answer: 0 },
-      { text: 'Ich habe heute Abend Zeit.', choices: ['我今晚有時間。', '我不想出門。', '我住在台北。'], answer: 0 },
-      { text: 'Das Essen schmeckt sehr gut.', choices: ['這頓飯很好吃。', '這件衣服很便宜。', '我明天很忙。'], answer: 0 },
-      { text: 'Bitte gib mir deinen Namen.', choices: ['請告訴我你的名字。', '你要幾點出發？', '我已經吃飽了。'], answer: 0 },
-      { text: 'Ich fahre mit dem Fahrrad zur Arbeit.', choices: ['我騎腳踏車上班。', '我今天要去購物。', '我有一個弟弟。'], answer: 0 },
-      { text: 'Heute ist das Wetter sehr schön.', choices: ['今天天氣很好。', '我正在寫一封信。', '你會說中文嗎？'], answer: 0 },
-      { text: 'Entschuldigung, ich habe eine Frage.', choices: ['不好意思，我有一個問題。', '請問廁所在哪裡？', '你喜歡看電影嗎？'], answer: 0 }
+      { text: 'Guten Morgen! Wie geht es dir heute am Morgen?', choices: ['你今天早上過得如何？', '你要去哪裡？', '我喜歡這件衣服。'], answer: 0 },
+      { text: 'Ich brauche ein großes Glas Wasser, bitte, weil mir sehr durstig ist.', choices: ['請給我一大杯水，因為我很渴。', '這個多少錢？', '我有一隻貓。'], answer: 0 },
+      { text: 'Wo ist die nächste U-Bahn-Station, die in Richtung Stadtzentrum fährt?', choices: ['最近開往市中心的地鐵站在哪裡？', '你喜歡吃什麼？', '明天要不要見面？'], answer: 0 },
+      { text: 'Kannst du mir helfen, diesen Weg zum Hotel zu finden?', choices: ['你可以幫我找到到飯店的路嗎？', '你想喝茶還是咖啡？', '我的手機不見了。'], answer: 0 },
+      { text: 'Ich habe heute Abend Zeit, wenn du dich treffen möchtest.', choices: ['我今晚有時間，如果你想見面。', '我不想出門。', '我住在台北。'], answer: 0 },
+      { text: 'Das Essen schmeckt sehr gut, besonders die Suppe ist sehr lecker.', choices: ['這餐很好吃，特別是湯很美味。', '這件衣服很便宜。', '我明天很忙。'], answer: 0 },
+      { text: 'Bitte gib mir deinen Namen und deine Telefonnummer.', choices: ['請告訴我你的名字和電話。', '你要幾點出發？', '我已經吃飽了。'], answer: 0 },
+      { text: 'Ich fahre mit dem Fahrrad zur Arbeit, weil es schnell und gesund ist.', choices: ['我騎腳踏車上班，因為又快又健康。', '我今天要去購物。', '我有一個弟弟。'], answer: 0 },
+      { text: 'Heute ist das Wetter sehr schön, also wollen wir im Park spazieren gehen.', choices: ['今天天氣很好，我們去公園散步吧。', '我正在寫一封信。', '你會說中文嗎？'], answer: 0 },
+      { text: 'Entschuldigung, ich habe eine Frage zum Busfahrplan für morgen.', choices: ['不好意思，我有一個關於明天公車時刻的問題。', '請問廁所在哪裡？', '你喜歡看電影嗎？'], answer: 0 }
     ];
 
+    let questionOrder = [];
     let currentIndex = 0;
     let answered = false;
 
@@ -155,12 +156,26 @@
     const resultEl = document.getElementById('result');
     const progressEl = document.getElementById('progress');
 
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+
+    function startQuiz() {
+      questionOrder = questions.slice();
+      shuffleArray(questionOrder);
+      currentIndex = 0;
+      loadQuestion();
+    }
+
     function updateProgress() {
-      progressEl.textContent = `題目 ${currentIndex + 1} / ${questions.length}`;
+      progressEl.textContent = `題目 ${currentIndex + 1} / ${questionOrder.length}`;
     }
 
     function loadQuestion() {
-      const question = questions[currentIndex];
+      const question = questionOrder[currentIndex];
       optionsContainer.innerHTML = '';
       resultEl.textContent = '';
       answered = false;
@@ -178,7 +193,7 @@
     function selectAnswer(choiceIndex) {
       if (answered) return;
       answered = true;
-      const question = questions[currentIndex];
+      const question = questionOrder[currentIndex];
       if (choiceIndex === question.answer) {
         resultEl.textContent = '答對了！✅';
         resultEl.className = 'result correct';
@@ -189,7 +204,7 @@
     }
 
     function speakSentence() {
-      const question = questions[currentIndex];
+      const question = questionOrder[currentIndex];
       if (!('speechSynthesis' in window)) {
         alert('此瀏覽器不支援語音合成，請使用 Chrome 或 Edge。');
         return;
@@ -202,11 +217,11 @@
 
     playBtn.addEventListener('click', speakSentence);
     nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % questions.length;
+      currentIndex = (currentIndex + 1) % questionOrder.length;
       loadQuestion();
     });
 
-    loadQuestion();
+    startQuiz();
   </script>
 </body>
 </html>
