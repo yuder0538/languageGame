@@ -227,11 +227,14 @@
       { text: 'ありがとうございます、あなたの助けに本当に感謝します。今日はとても助かりました。', choices: ['謝謝你，我真的很感謝你的幫忙，今天非常幫助我。', '對不起，我剛才有點不清楚你的意思。', '請再說一次，我想確認我沒有聽錯。'], answer: 0 }
     ];
 
+    const QUESTIONS_PER_ROUND = 10;
     let questionPool = [];
     let currentQuestion = null;
     let currentIndex = 0;
+    let correctCount = 0;
     let answered = false;
     let lives = 3;
+    let totalQuestions = QUESTIONS_PER_ROUND;
 
     const playBtn = document.getElementById('playBtn');
     const nextBtn = document.getElementById('nextBtn');
@@ -290,26 +293,54 @@
       return arr;
     }
 
+    function selectRandomQuestions(arr, count) {
+      const shuffled = shuffleArray(arr.slice());
+      return shuffled.slice(0, count);
+    }
+
     function startQuiz() {
-      questionPool = shuffleArray(questions.slice());
+      questionPool = selectRandomQuestions(questions, QUESTIONS_PER_ROUND);
       currentIndex = 0;
+      correctCount = 0;
       lives = 3;
+      answered = false;
       updateLivesDisplay();
       loadNextQuestion();
     }
 
     function updateProgress() {
-      progressEl.textContent = `題目 ${currentIndex} / ${questions.length} | 生命: ${lives}`;
+      progressEl.textContent = `題目 ${currentIndex} / ${totalQuestions} | 生命: ${lives} | 正確: ${correctCount}`;
     }
 
     function updateLivesDisplay() {
       updateProgress();
     }
 
+    function showGameComplete() {
+      optionsContainer.innerHTML = '';
+      resultEl.innerHTML = `
+        <div style="text-align: center; padding: 40px 20px; font-size: 1.2rem;">
+          <div style="margin-bottom: 20px; font-size: 2rem;">🎉 遊戲完成！🎉</div>
+          <div style="margin-bottom: 30px; font-size: 1.5rem;">最終分數：${correctCount} / ${totalQuestions}</div>
+          <button id="restartBtn" style="padding: 16px 32px; font-size: 1.1rem; margin-top: 20px;">重新開始</button>
+        </div>
+      `;
+      resultEl.className = 'result';
+      progressEl.textContent = '';
+      playBtn.disabled = true;
+      nextBtn.disabled = true;
+      document.getElementById('restartBtn').addEventListener('click', () => {
+        playClickSound();
+        playBtn.disabled = false;
+        nextBtn.disabled = false;
+        startQuiz();
+      });
+    }
+
     function loadNextQuestion() {
       if (questionPool.length === 0) {
-        questionPool = shuffleArray(questions.slice());
-        currentIndex = 0;
+        showGameComplete();
+        return;
       }
 
       currentQuestion = questionPool.pop();
@@ -343,6 +374,7 @@
         resultEl.textContent = '答對了！✅';
         resultEl.className = 'result correct';
         playCorrectSound();
+        correctCount++;
       } else {
         resultEl.textContent = `答錯了。正確答案是：「${currentQuestion.choices[currentQuestion.answer]}」。`;
         resultEl.className = 'result wrong';
@@ -352,8 +384,7 @@
 
         if (lives <= 0) {
           setTimeout(() => {
-            alert('生命用完了！重新開始遊戲。');
-            startQuiz();
+            showGameComplete();
           }, 2000);
           return;
         }
