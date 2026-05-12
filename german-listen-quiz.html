@@ -224,21 +224,11 @@
     </div>
   </div>
 
+  <script src="questions_output.js"></script>
   <script>
-    const questions = [
-      { text: 'Guten Morgen! Wie geht es dir heute am Morgen, nachdem du so früh aufgestanden bist?', choices: ['你今天早上過得如何？', '你昨天晚上睡得好嗎？我想知道你休息好了沒。', '你今天準備要去哪裡？我們可以一起走。'], answer: 0 },
-      { text: 'Ich brauche ein großes Glas Wasser, bitte, weil ich sehr durstig bin und es draußen heiß ist.', choices: ['請給我一大杯水，因為我很渴而且外面很熱。', '你有沒有別的飲料可以推薦給我？', '我想先坐下來休息再喝東西。'], answer: 0 },
-      { text: 'Wo ist die nächste U-Bahn-Station, die in Richtung Stadtzentrum fährt und nicht zu weit entfernt ist?', choices: ['最近開往市中心、而且不太遠的地鐵站在哪裡？', '你知道附近哪裡有比較好吃的餐廳嗎？', '這裡離旅館還有多遠，我該怎麼走？'], answer: 0 },
-      { text: 'Kannst du mir helfen, diesen Weg zum Hotel zu finden, weil ich mich hier nicht gut auskenne?', choices: ['你可以幫我找到到飯店的路嗎？我對這裡不是很熟。', '我想先查一下地圖再決定要不要走這條路。', '你能不能先告訴我最近的地標是什麼？'], answer: 0 },
-      { text: 'Ich habe heute Abend Zeit, wenn du dich treffen möchtest, aber ich kann nicht zu spät bleiben.', choices: ['我今晚有時間，如果你想見面，但我不能待太晚。', '我今天下午還有很多事，所以晚一點再說。', '如果太晚了，我明天一早還要去上班。'], answer: 0 },
-      { text: 'Das Essen schmeckt sehr gut, besonders die Suppe und das Brot, das frisch gebacken wurde.', choices: ['這餐很好吃，特別是湯和剛烤好的麵包。', '這家餐廳的氣氛也很舒服，我覺得很適合聚餐。', '我覺得甜點的味道也滿有特色的。'], answer: 0 },
-      { text: 'Bitte gib mir deinen Namen und deine Telefonnummer, falls wir uns später noch einmal treffen möchten.', choices: ['請告訴我你的名字和電話，萬一天氣好我們再見面。', '你覺得我們什麼時候再約比較方便？', '如果你方便的話，我想記下你的聯絡方式。'], answer: 0 },
-      { text: 'Ich fahre mit dem Fahrrad zur Arbeit, weil es schnell und gesund ist und ich die frische Luft mag.', choices: ['我騎腳踏車上班，因為又快又健康，而且我喜歡新鮮空氣。', '我每天騎車上班可以避開公車的擁擠。', '天氣好時騎車上班感覺特別輕鬆。'], answer: 0 },
-      { text: 'Heute ist das Wetter sehr schön, also wollen wir im Park spazieren gehen und vielleicht ein Eis essen.', choices: ['今天天氣很好，我們去公園散步，或許還可以吃冰淇淋。', '你覺得公園裡的花開得怎麼樣？', '我們走到湖邊坐著聊聊天好不好？'], answer: 0 },
-      { text: 'Entschuldigung, ich habe eine Frage zum Busfahrplan für morgen, weil ich früh am Flughafen sein muss.', choices: ['不好意思，我有一個關於明天公車時刻的問題，因為我必須很早到機場。', '你知道哪一班車比較快可以到機場嗎？', '我不確定什麼時間出門才不會趕不上。'], answer: 0 }
-    ];
+    const questions = germanQuestions;
 
-    const QUESTIONS_PER_ROUND = 10;
+    const QUESTIONS_PER_ROUND = 20;
     let questionPool = [];
     let currentQuestion = null;
     let currentIndex = 0;
