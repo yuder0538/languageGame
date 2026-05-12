@@ -3,8 +3,8 @@
   "text": "Ich möchte zum Frühstück ein Brötchen mit Butter und Marmelade essen.",
   "choices": [
     "我想早餐吃塗黃油和果醬的麵包。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "這個奶油湯絕對很好吃。",
+    "運費太高了。"
   ],
   "answer": 0
 },
@@ -12,8 +12,8 @@
   "text": "Möchtest du ein Glas Orangensaft oder Milch zum Frühstück?",
   "choices": [
     "你早餐要一杯柳橙汁還是牛奶？",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我每天運動。",
+    "雞肉太乾了，廚師下次能做得嫩一點嗎？"
   ],
   "answer": 0
 },
@@ -21,8 +21,8 @@
   "text": "Der Kaffee ist noch zu heiß, ich warte noch ein bisschen.",
   "choices": [
     "咖啡還太燙，我先等一下再喝。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "這牛排太生了，服務員能再把它放回烤架嗎？",
+    "你早餐要一杯柳橙汁還是牛奶？"
   ],
   "answer": 0
 },
@@ -30,8 +30,8 @@
   "text": "Zum Frühstück nehme ich gerne Müsli mit Obst und Joghurt.",
   "choices": [
     "我早餐喜歡吃穀物麥片配水果和優格。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "馬鈴薯煎餅很好吃。",
+    "可頌和熱咖啡很搭。"
   ],
   "answer": 0
 },
@@ -39,8 +39,8 @@
   "text": "Hast du das Brot aus dem Supermarkt oder vom Bäcker gekauft?",
   "choices": [
     "你是從超市還是從麵包店買的麵包？",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我掃客廳，然後拖地。",
+    "我想買月票。"
   ],
   "answer": 0
 },
@@ -48,8 +48,8 @@
   "text": "Ich esse Spiegeleier mit Speck und Toast.",
   "choices": [
     "我吃太陽蛋配培根和吐司。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我有張禮券，能用嗎？",
+    "我早上沒時間，所以不吃早餐。"
   ],
   "answer": 0
 },
@@ -57,8 +57,8 @@
   "text": "Magst du dein Ei weich gekocht oder hart gekocht?",
   "choices": [
     "你喜歡吃軟煮蛋還是硬煮蛋？",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我上班前早上洗澡。",
+    "襯衫有個污漬，我試著去除。"
   ],
   "answer": 0
 },
@@ -66,8 +66,8 @@
   "text": "Zum Frühstück trinke ich immer grünen Tee.",
   "choices": [
     "我早餐經常喝綠茶。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "早餐是一天中最重要的餐點。",
+    "我擦家具上的灰塵。"
   ],
   "answer": 0
 },
@@ -75,8 +75,8 @@
   "text": "Das Frühstück ist die wichtigste Mahlzeit des Tages.",
   "choices": [
     "早餐是一天中最重要的餐點。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "今天的馬鈴薯很粉和好吃。",
+    "一杯熱巧克力很適合冬天。"
   ],
   "answer": 0
 },
@@ -84,8 +84,8 @@
   "text": "Ich frühstücke nie, weil ich morgens keine Zeit habe.",
   "choices": [
     "我早上沒時間，所以不吃早餐。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "啤酒是德國最受歡迎的飲品。",
+    "我想要一個漢堡配薯條。"
   ],
   "answer": 0
 },
@@ -93,8 +93,8 @@
   "text": "Toast mit Avocado und Tomate ist sehr gesund.",
   "choices": [
     "塗酪梨和番茄的吐司很健康。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我想要一份清淡的晚餐。",
+    "垃圾桶滿了，我要倒垃圾。"
   ],
   "answer": 0
 },
@@ -102,8 +102,8 @@
   "text": "Pandabrot mit Nutella ist mein Favorit.",
   "choices": [
     "塗花生醬的麵包是我的最愛。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "甜點我要巧克力蛋糕配香草冰淇淋。",
+    "我對花生過敏。"
   ],
   "answer": 0
 },
@@ -111,8 +111,8 @@
   "text": "Ein Croissant mit heißem Kaffee ist perfekt.",
   "choices": [
     "可頌和熱咖啡很搭。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "這個奶油湯絕對很好吃。",
+    "你喜歡穿牛仔褲還是西裝褲？"
   ],
   "answer": 0
 },
@@ -120,8 +120,8 @@
   "text": "Ich mag Pancakes mit Ahornsirup zum Brunch.",
   "choices": [
     "我喜歡早午餐吃楓糖漿鬆餅。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "一杯熱巧克力很適合冬天。",
+    "這件夾克對夏天太厚了。"
   ],
   "answer": 0
 },
@@ -129,8 +129,8 @@
   "text": "Magst du Müsli mit Mandeln oder Haselnüssen?",
   "choices": [
     "你喜歡吃杏仁還是榛果麥片？",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "雞肉太乾了，廚師下次能做得嫩一點嗎？",
+    "我每晚用牙線。"
   ],
   "answer": 0
 },
@@ -138,8 +138,8 @@
   "text": "Was ist heute Mittag im Menü? Es sieht sehr lecker aus.",
   "choices": [
     "今天午餐菜單是什麼？看起來很好吃。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "垃圾桶滿了，我要倒垃圾。",
+    "我頭痛，能給我一顆藥嗎？"
   ],
   "answer": 0
 },
@@ -147,8 +147,8 @@
   "text": "Ich nehme einen Salat mit Hähnchen und Öl-Essig-Dressing als Mittagessen.",
   "choices": [
     "我午餐吃雞肉沙拉配油醋醬。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "你喜歡吃杏仁還是榛果麥片？",
+    "我喝很多水來保持健康。"
   ],
   "answer": 0
 },
@@ -156,8 +156,8 @@
   "text": "Die Pasta schmeckt fantastisch, der Koch hat es perfekt gemacht.",
   "choices": [
     "這義大利麵很好吃，廚師做得很完美。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我想要一份清淡的晚餐。",
+    "我喝很多水來保持健康。"
   ],
   "answer": 0
 },
@@ -165,8 +165,8 @@
   "text": "Kann ich noch einen Teller Suppe bekommen?",
   "choices": [
     "我還能再要一盤湯嗎？",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我晚餐喝葡萄酒。",
+    "我用30度洗衣服。"
   ],
   "answer": 0
 },
@@ -174,8 +174,8 @@
   "text": "Für Mittagessen will ich Fisch mit Gemüse und Kartoffeln.",
   "choices": [
     "午餐我想吃魚配蔬菜和馬鈴薯。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "你喜歡吃辣嗎？這咖哩很辛辣。",
+    "我擦家具上的灰塵。"
   ],
   "answer": 0
 },
@@ -183,8 +183,8 @@
   "text": "Ich esse Spaghetti mit Tomatensoße und Parmesan.",
   "choices": [
     "我吃番茄醬義大利麵配帕瑪森起司。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我每天刷牙兩次。",
+    "我每個月洗一次窗簾。"
   ],
   "answer": 0
 },
@@ -192,8 +192,8 @@
   "text": "Das Hähnchen ist zu trocken, kann der Koch es nächstes Mal feuchter machen?",
   "choices": [
     "雞肉太乾了，廚師下次能做得嫩一點嗎？",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "今天的米飯特別好吃。",
+    "你們有M號的這個商品嗎？"
   ],
   "answer": 0
 },
@@ -201,8 +201,8 @@
   "text": "Ich hätte gerne einen Burger mit Pommes.",
   "choices": [
     "我想要一個漢堡配薯條。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我想買月票。",
+    "我早餐喜歡吃穀物麥片配水果和優格。"
   ],
   "answer": 0
 },
@@ -210,8 +210,8 @@
   "text": "Der Reis ist heute besonders köstlich.",
   "choices": [
     "今天的米飯特別好吃。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "水槽有異味，我要清潔。",
+    "你喜歡吃軟煮蛋還是硬煮蛋？"
   ],
   "answer": 0
 },
@@ -219,8 +219,8 @@
   "text": "Magst du scharf essen? Dieses Curry ist sehr würzig.",
   "choices": [
     "你喜歡吃辣嗎？這咖哩很辛辣。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "早餐是一天中最重要的餐點。",
+    "你更喜歡喝茶還是咖啡？"
   ],
   "answer": 0
 },
@@ -228,8 +228,8 @@
   "text": "Pizza mit Pilzen und Mozzarella ist mein Lieblingsgericht.",
   "choices": [
     "蘑菇馬蘇里拉披薩是我的最愛。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "這個肥皂很滋潤皮膚。",
+    "我用吹風機吹乾頭髮。"
   ],
   "answer": 0
 },
@@ -237,8 +237,8 @@
   "text": "Ich esse Mittagessen nie, weil ich Diät halte.",
   "choices": [
     "我不吃午餐，因為我在節食。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我對花生過敏。",
+    "產品有缺陷，能給我新的嗎？"
   ],
   "answer": 0
 },
@@ -246,8 +246,8 @@
   "text": "Die Kartoffeln sind heute sehr mehlig und köstlich.",
   "choices": [
     "今天的馬鈴薯很粉和好吃。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "有退貨保證嗎？",
+    "我每個月洗一次窗簾。"
   ],
   "answer": 0
 },
@@ -255,8 +255,8 @@
   "text": "Ich mag Sushi zum Mittagessen.",
   "choices": [
     "我喜歡午餐吃壽司。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我去牙醫診所洗牙。",
+    "不好意思，廁所在哪裡？"
   ],
   "answer": 0
 },
@@ -264,8 +264,8 @@
   "text": "Diese Cremesuppe ist absolut köstlich.",
   "choices": [
     "這個奶油湯絕對很好吃。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我吸地毯。",
+    "運費太高了。"
   ],
   "answer": 0
 },
@@ -273,8 +273,8 @@
   "text": "Heute Abend essen wir gegrilltes Hähnchen mit Reis und Brokkoli.",
   "choices": [
     "今晚我們吃烤雞配米飯和綠花菜。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我午餐吃雞肉沙拉配油醋醬。",
+    "我每個月洗一次窗簾。"
   ],
   "answer": 0
 },
@@ -282,8 +282,8 @@
   "text": "Das Steak ist zu roh, kann der Kellner es noch mal auf den Grill legen?",
   "choices": [
     "這牛排太生了，服務員能再把它放回烤架嗎？",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "花園需要照料。",
+    "這雙鞋很舒服。"
   ],
   "answer": 0
 },
@@ -291,8 +291,8 @@
   "text": "Magst du Würstchen oder lieber Fleischbällchen zum Abendessen?",
   "choices": [
     "你晚餐喜歡吃香腸還是肉丸？",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "洗髮精用完了，我明天買新的。",
+    "馬鈴薯煎餅很好吃。"
   ],
   "answer": 0
 },
@@ -300,8 +300,8 @@
   "text": "Zum Nachtisch nehme ich Schokoladenkuchen mit Vanilleeis.",
   "choices": [
     "甜點我要巧克力蛋糕配香草冰淇淋。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我吃血壓藥。",
+    "今晚我們吃烤雞配米飯和綠花菜。"
   ],
   "answer": 0
 },
@@ -309,8 +309,8 @@
   "text": "Das Gemüse ist noch zu hart, können Sie es etwas länger kochen?",
   "choices": [
     "蔬菜還太硬，你能再煮久一點嗎？",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我今天沒有胃口，只吃清淡沙拉。",
+    "火車晚點了。"
   ],
   "answer": 0
 },
@@ -318,8 +318,8 @@
   "text": "Ich koche Suppe für das Abendessen.",
   "choices": [
     "我晚餐煮湯。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我去牙醫診所洗牙。",
+    "我今天沒有胃口，只吃清淡沙拉。"
   ],
   "answer": 0
 },
@@ -327,8 +327,8 @@
   "text": "Rotkohl ist sehr lecker mit Kartoffeln.",
   "choices": [
     "紫甘藍配馬鈴薯很好吃。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "這牛排太生了，服務員能再把它放回烤架嗎？",
+    "這個商品要多少錢？"
   ],
   "answer": 0
 },
@@ -336,8 +336,8 @@
   "text": "Ich esse Fisch jeden Freitag zum Abendessen.",
   "choices": [
     "我每個星期五晚餐吃魚。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我生病了，想預約看醫生。",
+    "我早餐喜歡喝柳橙汁。"
   ],
   "answer": 0
 },
@@ -345,8 +345,8 @@
   "text": "Das Rindersteak ist zu zäh, bitte machen Sie es zarter.",
   "choices": [
     "牛排太硬了，請做得更嫩一些。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "馬鈴薯煎餅很好吃。",
+    "今晚我們吃烤雞配米飯和綠花菜。"
   ],
   "answer": 0
 },
@@ -354,8 +354,8 @@
   "text": "Ich möchte eine leichte Mahlzeit zum Abendessen.",
   "choices": [
     "我想要一份清淡的晚餐。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我更喜歡穿棉製品，因為它很天然。",
+    "一杯熱巧克力很適合冬天。"
   ],
   "answer": 0
 },
@@ -363,8 +363,8 @@
   "text": "Können Sie mir ein vegetarisches Gericht empfehlen?",
   "choices": [
     "你能推薦一道素菜嗎？",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我的牙刷丟了，我要買一把新的。",
+    "我頭痛，能給我一顆藥嗎？"
   ],
   "answer": 0
 },
@@ -372,8 +372,8 @@
   "text": "Das Schweinefleisch ist sehr zart heute.",
   "choices": [
     "今天的豬肉很嫩。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我單獨洗有顏色的衣服。",
+    "鏡子起霧了，我擦一下。"
   ],
   "answer": 0
 },
@@ -381,8 +381,8 @@
   "text": "Ich mag Ente zum Abendessen, aber es ist sehr teuer.",
   "choices": [
     "我喜歡晚餐吃鴨肉，但很貴。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "有學生折扣嗎？",
+    "我喜歡網上購物。"
   ],
   "answer": 0
 },
@@ -390,8 +390,8 @@
   "text": "Die Kartoffelpuffer sind köstlich.",
   "choices": [
     "馬鈴薯煎餅很好吃。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "這條褲子我穿不下了，太小了。",
+    "我能停車嗎？"
   ],
   "answer": 0
 },
@@ -399,8 +399,8 @@
   "text": "Ich habe kein Appetit heute, ich esse nur einen leichten Salat.",
   "choices": [
     "我今天沒有胃口，只吃清淡沙拉。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "鏡子起霧了，我擦一下。",
+    "我的牙刷丟了，我要買一把新的。"
   ],
   "answer": 0
 },
@@ -408,8 +408,8 @@
   "text": "Ich trinke jeden Morgen einen Kaffee.",
   "choices": [
     "我每天早上喝一杯咖啡。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我早餐經常喝綠茶。",
+    "今天的米飯特別好吃。"
   ],
   "answer": 0
 },
@@ -417,8 +417,8 @@
   "text": "Magst du Tee oder Kaffee lieber?",
   "choices": [
     "你更喜歡喝茶還是咖啡？",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我能停車嗎？",
+    "西裝皺了，我送去乾洗。"
   ],
   "answer": 0
 },
@@ -426,8 +426,8 @@
   "text": "Ein Glas Wasser mit Zitrone, bitte.",
   "choices": [
     "請給我一杯檸檬水。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我需要繃帶包紮傷口。",
+    "今天午餐菜單是什麼？看起來很好吃。"
   ],
   "answer": 0
 },
@@ -435,8 +435,8 @@
   "text": "Ich trinke Wein zum Abendessen.",
   "choices": [
     "我晚餐喝葡萄酒。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我用吹風機吹乾頭髮。",
+    "今天的米飯特別好吃。"
   ],
   "answer": 0
 },
@@ -444,8 +444,8 @@
   "text": "Bier ist das beliebteste Getränk in Deutschland.",
   "choices": [
     "啤酒是德國最受歡迎的飲品。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "今天的豬肉很嫩。",
+    "甜點我要巧克力蛋糕配香草冰淇淋。"
   ],
   "answer": 0
 },
@@ -453,8 +453,8 @@
   "text": "Ich mag Orangensaft zum Frühstück.",
   "choices": [
     "我早餐喜歡喝柳橙汁。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我有張禮券，能用嗎？",
+    "我每晚用牙線。"
   ],
   "answer": 0
 },
@@ -462,8 +462,8 @@
   "text": "Kann ich einen Espresso bekommen?",
   "choices": [
     "我能要一杯濃咖啡嗎？",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "一杯熱巧克力很適合冬天。",
+    "西裝皺了，我送去乾洗。"
   ],
   "answer": 0
 },
@@ -471,8 +471,8 @@
   "text": "Schwarzer Tee ohne Zucker, bitte.",
   "choices": [
     "請給我無糖紅茶。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我每天早上喝一杯咖啡。",
+    "我需要繃帶包紮傷口。"
   ],
   "answer": 0
 },
@@ -480,8 +480,8 @@
   "text": "Eine Tasse warme Schokolade ist perfekt für den Winter.",
   "choices": [
     "一杯熱巧克力很適合冬天。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "紫甘藍配馬鈴薯很好吃。",
+    "這太貴了，沒有更便宜的嗎？"
   ],
   "answer": 0
 },
@@ -489,8 +489,8 @@
   "text": "Ich trinke viel Wasser, um gesund zu bleiben.",
   "choices": [
     "我喝很多水來保持健康。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我擦家具上的灰塵。",
+    "我晚餐喝葡萄酒。"
   ],
   "answer": 0
 },
@@ -498,8 +498,8 @@
   "text": "Ich brauche Toilettenpapier. Wo kann ich es kaufen?",
   "choices": [
     "我需要衛生紙。我在哪裡可以買到？",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我還能再要一盤湯嗎？",
+    "你是從超市還是從麵包店買的麵包？"
   ],
   "answer": 0
 },
@@ -507,8 +507,8 @@
   "text": "Entschuldigung, wo ist die Toilette?",
   "choices": [
     "不好意思，廁所在哪裡？",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我的牙刷丟了，我要買一把新的。",
+    "我每天早上喝一杯咖啡。"
   ],
   "answer": 0
 },
@@ -516,8 +516,8 @@
   "text": "Ich wasche meine Hände mit Seife.",
   "choices": [
     "我用肥皂洗手。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "你更喜歡喝茶還是咖啡？",
+    "我需要繃帶包紮傷口。"
   ],
   "answer": 0
 },
@@ -525,8 +525,8 @@
   "text": "Mir fehlt die Zahnbürste, ich muss eine neue kaufen.",
   "choices": [
     "我的牙刷丟了，我要買一把新的。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "這牛排太生了，服務員能再把它放回烤架嗎？",
+    "這個季節流感很嚴重。"
   ],
   "answer": 0
 },
@@ -534,8 +534,8 @@
   "text": "Kann ich ein Handtuch haben?",
   "choices": [
     "我能要一條毛巾嗎？",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "蘑菇馬蘇里拉披薩是我的最愛。",
+    "這個商品要多少錢？"
   ],
   "answer": 0
 },
@@ -543,8 +543,8 @@
   "text": "Ich putze meine Zähne zweimal täglich.",
   "choices": [
     "我每天刷牙兩次。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "垃圾桶滿了，我要倒垃圾。",
+    "我需要繃帶包紮傷口。"
   ],
   "answer": 0
 },
@@ -552,8 +552,8 @@
   "text": "Das Shampoo ist alle, ich kaufe morgen ein neues.",
   "choices": [
     "洗髮精用完了，我明天買新的。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "你更喜歡喝茶還是咖啡？",
+    "我想要一個漢堡配薯條。"
   ],
   "answer": 0
 },
@@ -561,8 +561,8 @@
   "text": "Ich nehme ein warmes Bad zum Entspannen.",
   "choices": [
     "我洗個溫水澡放鬆。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我對花生過敏。",
+    "我用30度洗衣服。"
   ],
   "answer": 0
 },
@@ -570,8 +570,8 @@
   "text": "Wo ist der Spiegel? Ich muss mein Haar kämmen.",
   "choices": [
     "鏡子在哪裡？我要梳頭。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "午餐我想吃魚配蔬菜和馬鈴薯。",
+    "我去牙醫診所洗牙。"
   ],
   "answer": 0
 },
@@ -579,8 +579,8 @@
   "text": "Ich benutze Zahnseide jeden Abend.",
   "choices": [
     "我每晚用牙線。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "請給我一杯檸檬水。",
+    "西裝皺了，我送去乾洗。"
   ],
   "answer": 0
 },
@@ -588,8 +588,8 @@
   "text": "Diese Soap ist sehr pflegend für die Haut.",
   "choices": [
     "這個肥皂很滋潤皮膚。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我有張禮券，能用嗎？",
+    "我不喜歡這個顏色，能給我另一件嗎？"
   ],
   "answer": 0
 },
@@ -597,8 +597,8 @@
   "text": "Ich dusche morgens, bevor ich zur Arbeit gehe.",
   "choices": [
     "我上班前早上洗澡。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我每個星期五晚餐吃魚。",
+    "塗花生醬的麵包是我的最愛。"
   ],
   "answer": 0
 },
@@ -606,8 +606,8 @@
   "text": "Das Badezimmer ist kalt, können Sie die Heizung anmachen?",
   "choices": [
     "浴室很冷，你能打開暖氣嗎？",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我喜歡早午餐吃楓糖漿鬆餅。",
+    "水槽有異味，我要清潔。"
   ],
   "answer": 0
 },
@@ -615,8 +615,8 @@
   "text": "Ich trockne mein Haar mit dem Haartrockner.",
   "choices": [
     "我用吹風機吹乾頭髮。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我擦家具上的灰塵。",
+    "你晚餐喜歡吃香腸還是肉丸？"
   ],
   "answer": 0
 },
@@ -624,8 +624,8 @@
   "text": "Entschuldigung, die Toilette ist verstopft.",
   "choices": [
     "不好意思，廁所堵塞了。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我吃血壓藥。",
+    "客人來之前我打掃房子。"
   ],
   "answer": 0
 },
@@ -633,8 +633,8 @@
   "text": "Diese Hose passt mir nicht mehr, sie ist zu klein.",
   "choices": [
     "這條褲子我穿不下了，太小了。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我喜歡晚餐吃鴨肉，但很貴。",
+    "我喝很多水來保持健康。"
   ],
   "answer": 0
 },
@@ -642,8 +642,8 @@
   "text": "Ich wasche die Wäsche bei 30 Grad.",
   "choices": [
     "我用30度洗衣服。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我晚餐煮湯。",
+    "最近的公車站在哪裡？"
   ],
   "answer": 0
 },
@@ -651,8 +651,8 @@
   "text": "Das Hemd hat einen Fleck, ich versuche ihn zu entfernen.",
   "choices": [
     "襯衫有個污漬，我試著去除。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我每天刷牙兩次。",
+    "你更喜歡喝茶還是咖啡？"
   ],
   "answer": 0
 },
@@ -660,8 +660,8 @@
   "text": "Ich bügele die Bluse, weil sie zerknittert ist.",
   "choices": [
     "我熨女用襯衫，因為它很皺。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "衣服乾了，我現在摺疊。",
+    "我喝很多水來保持健康。"
   ],
   "answer": 0
 },
@@ -669,8 +669,8 @@
   "text": "Diese Jacke ist zu dick für den Sommer.",
   "choices": [
     "這件夾克對夏天太厚了。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我用吹風機吹乾頭髮。",
+    "你們有M號的這個商品嗎？"
   ],
   "answer": 0
 },
@@ -678,8 +678,8 @@
   "text": "Der Rock ist zu lang, ich muss ihn kürzer machen.",
   "choices": [
     "裙子太長了，我要縮短。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "今晚我們吃烤雞配米飯和綠花菜。",
+    "我每天早上喝一杯咖啡。"
   ],
   "answer": 0
 },
@@ -687,8 +687,8 @@
   "text": "Ich mag diese Farbe nicht, kannst du mir ein anderes bringen?",
   "choices": [
     "我不喜歡這個顏色，能給我另一件嗎？",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "襯衫有個污漬，我試著去除。",
+    "我每週換一次床單。"
   ],
   "answer": 0
 },
@@ -696,8 +696,8 @@
   "text": "Diese Schuhe sind sehr bequem.",
   "choices": [
     "這雙鞋很舒服。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我能分期付款嗎？",
+    "我想早餐吃塗黃油和果醬的麵包。"
   ],
   "answer": 0
 },
@@ -705,8 +705,8 @@
   "text": "Ich trage lieber Baumwolle, weil sie natürlich ist.",
   "choices": [
     "我更喜歡穿棉製品，因為它很天然。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我用30度洗衣服。",
+    "花園需要照料。"
   ],
   "answer": 0
 },
@@ -714,8 +714,8 @@
   "text": "Der Anzug ist faltig geworden, ich bringe ihn zur Reinigung.",
   "choices": [
     "西裝皺了，我送去乾洗。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我找一件紅色洋裝。",
+    "我要買新襪子。"
   ],
   "answer": 0
 },
@@ -723,8 +723,8 @@
   "text": "Ich wasche farbige Sachen separat.",
   "choices": [
     "我單獨洗有顏色的衣服。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我有張禮券，能用嗎？",
+    "馬鈴薯煎餅很好吃。"
   ],
   "answer": 0
 },
@@ -732,8 +732,8 @@
   "text": "Diese Bluse klebt an mir, weil sie nass ist.",
   "choices": [
     "這件襯衫粘著我，因為它濕了。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我怎麼去火車站？",
+    "馬鈴薯煎餅很好吃。"
   ],
   "answer": 0
 },
@@ -741,8 +741,8 @@
   "text": "Ich kann diese Knöpfe nicht finden.",
   "choices": [
     "我找不到這些扣子。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我需要繃帶包紮傷口。",
+    "這個優惠只到今天。"
   ],
   "answer": 0
 },
@@ -750,8 +750,8 @@
   "text": "Magst du Jeans oder lieber Anzughosen?",
   "choices": [
     "你喜歡穿牛仔褲還是西裝褲？",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我的牙刷丟了，我要買一把新的。",
+    "我對花生過敏。"
   ],
   "answer": 0
 },
@@ -759,8 +759,8 @@
   "text": "Ich muss neue Socken kaufen.",
   "choices": [
     "我要買新襪子。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我去牙醫診所洗牙。",
+    "我每個月洗一次窗簾。"
   ],
   "answer": 0
 },
@@ -768,8 +768,8 @@
   "text": "Ich kehre das Wohnzimmer und wasche dann den Boden.",
   "choices": [
     "我掃客廳，然後拖地。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "請給我一張到機場的票。",
+    "最近的公車站在哪裡？"
   ],
   "answer": 0
 },
@@ -777,8 +777,8 @@
   "text": "Der Müll ist voll, ich muss ihn leeren.",
   "choices": [
     "垃圾桶滿了，我要倒垃圾。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我吃番茄醬義大利麵配帕瑪森起司。",
+    "這條褲子我穿不下了，太小了。"
   ],
   "answer": 0
 },
@@ -786,8 +786,8 @@
   "text": "Ich wasche Geschirr nach dem Essen.",
   "choices": [
     "吃完飯後我洗碗盤。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我還能再要一盤湯嗎？",
+    "這太貴了，沒有更便宜的嗎？"
   ],
   "answer": 0
 },
@@ -795,8 +795,8 @@
   "text": "Das Badezimmer ist schmutzig, ich putze es.",
   "choices": [
     "浴室很髒，我要清潔它。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我想要一個漢堡配薯條。",
+    "我還能再要一盤湯嗎？"
   ],
   "answer": 0
 },
@@ -804,8 +804,8 @@
   "text": "Ich wechsle die Bettwäsche jede Woche.",
   "choices": [
     "我每週換一次床單。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "咖啡還太燙，我先等一下再喝。",
+    "我不吃午餐，因為我在節食。"
   ],
   "answer": 0
 },
@@ -813,8 +813,8 @@
   "text": "Die Wäsche ist trocken, ich falte sie jetzt.",
   "choices": [
     "衣服乾了，我現在摺疊。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我能要一條毛巾嗎？",
+    "你早餐要一杯柳橙汁還是牛奶？"
   ],
   "answer": 0
 },
@@ -822,8 +822,8 @@
   "text": "Ich staube die Möbel ab.",
   "choices": [
     "我擦家具上的灰塵。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我更喜歡穿棉製品，因為它很天然。",
+    "我單獨洗有顏色的衣服。"
   ],
   "answer": 0
 },
@@ -831,8 +831,8 @@
   "text": "Der Fenster ist schmutzig, ich wasche ihn.",
   "choices": [
     "窗戶很髒，我要洗它。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我喜歡晚餐吃鴨肉，但很貴。",
+    "早餐是一天中最重要的餐點。"
   ],
   "answer": 0
 },
@@ -840,8 +840,8 @@
   "text": "Ich sauge den Teppich.",
   "choices": [
     "我吸地毯。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我不喜歡這個顏色，能給我另一件嗎？",
+    "你們有M號的這個商品嗎？"
   ],
   "answer": 0
 },
@@ -849,8 +849,8 @@
   "text": "Der Garten muss gepflegt werden.",
   "choices": [
     "花園需要照料。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我午餐吃雞肉沙拉配油醋醬。",
+    "我洗個溫水澡放鬆。"
   ],
   "answer": 0
 },
@@ -858,8 +858,8 @@
   "text": "Ich stelle die Küche auf den Kopf.",
   "choices": [
     "我把廚房整理乾淨。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "我不喜歡這個顏色，能給我另一件嗎？",
+    "蘑菇馬蘇里拉披薩是我的最愛。"
   ],
   "answer": 0
 },
@@ -867,8 +867,8 @@
   "text": "Die Spüle riecht unangenehm, ich putze sie.",
   "choices": [
     "水槽有異味，我要清潔。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "垃圾桶滿了，我要倒垃圾。",
+    "你喜歡吃杏仁還是榛果麥片？"
   ],
   "answer": 0
 },
@@ -876,8 +876,8 @@
   "text": "Ich wasche die Vorhänge einmal im Monat.",
   "choices": [
     "我每個月洗一次窗簾。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "客人來之前我打掃房子。",
+    "我每天早上喝一杯咖啡。"
   ],
   "answer": 0
 },
@@ -885,8 +885,8 @@
   "text": "Der Spiegel ist beschlagen, ich wische ihn.",
   "choices": [
     "鏡子起霧了，我擦一下。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我想買月票。",
+    "我把廚房整理乾淨。"
   ],
   "answer": 0
 },
@@ -894,8 +894,8 @@
   "text": "Ich mache das Haus sauber, bevor Gäste kommen.",
   "choices": [
     "客人來之前我打掃房子。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我吃番茄醬義大利麵配帕瑪森起司。",
+    "塗酪梨和番茄的吐司很健康。"
   ],
   "answer": 0
 },
@@ -903,8 +903,8 @@
   "text": "Wie viel kostet dieser Artikel?",
   "choices": [
     "這個商品要多少錢？",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "你能給我收據嗎？",
+    "我需要一輛計程車。"
   ],
   "answer": 0
 },
@@ -912,8 +912,8 @@
   "text": "Kann ich mit Kreditkarte zahlen?",
   "choices": [
     "我能用信用卡付款嗎？",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我想要一個漢堡配薯條。",
+    "最近的公車站在哪裡？"
   ],
   "answer": 0
 },
@@ -921,8 +921,8 @@
   "text": "Das ist zu teuer, gibt es nicht etwas Billigeres?",
   "choices": [
     "這太貴了，沒有更便宜的嗎？",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "有退貨保證嗎？",
+    "請給我一張到機場的票。"
   ],
   "answer": 0
 },
@@ -930,8 +930,8 @@
   "text": "Ich habe einen Gutschein, kann ich ihn verwenden?",
   "choices": [
     "我有張禮券，能用嗎？",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我洗個溫水澡放鬆。",
+    "我擦家具上的灰塵。"
   ],
   "answer": 0
 },
@@ -939,8 +939,8 @@
   "text": "Können Sie mir eine Quittung geben?",
   "choices": [
     "你能給我收據嗎？",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我能停車嗎？",
+    "塗酪梨和番茄的吐司很健康。"
   ],
   "answer": 0
 },
@@ -948,8 +948,8 @@
   "text": "Ich suche nach einem roten Kleid.",
   "choices": [
     "我找一件紅色洋裝。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我找不到這些扣子。",
+    "這件夾克對夏天太厚了。"
   ],
   "answer": 0
 },
@@ -957,8 +957,8 @@
   "text": "Haben Sie diesen Artikel in Größe M?",
   "choices": [
     "你們有M號的這個商品嗎？",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我用肥皂洗手。",
+    "客人來之前我打掃房子。"
   ],
   "answer": 0
 },
@@ -966,8 +966,8 @@
   "text": "Das Angebot läuft nur heute.",
   "choices": [
     "這個優惠只到今天。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "這雙鞋很舒服。",
+    "這個季節流感很嚴重。"
   ],
   "answer": 0
 },
@@ -975,8 +975,8 @@
   "text": "Ich möchte diesen Artikel umtauschen.",
   "choices": [
     "我想換這個商品。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "這個肥皂很滋潤皮膚。",
+    "我有張禮券，能用嗎？"
   ],
   "answer": 0
 },
@@ -984,8 +984,8 @@
   "text": "Gibt es eine Rückgabegarantie?",
   "choices": [
     "有退貨保證嗎？",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我需要衛生紙。我在哪裡可以買到？",
+    "午餐我想吃魚配蔬菜和馬鈴薯。"
   ],
   "answer": 0
 },
@@ -993,8 +993,8 @@
   "text": "Das Produkt ist fehlerhaft, können Sie mir ein neues geben?",
   "choices": [
     "產品有缺陷，能給我新的嗎？",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我早上沒時間，所以不吃早餐。",
+    "雞肉太乾了，廚師下次能做得嫩一點嗎？"
   ],
   "answer": 0
 },
@@ -1002,8 +1002,8 @@
   "text": "Ich kaufe gerne online ein.",
   "choices": [
     "我喜歡網上購物。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "裙子太長了，我要縮短。",
+    "浴室很髒，我要清潔它。"
   ],
   "answer": 0
 },
@@ -1011,8 +1011,8 @@
   "text": "Die Versandkosten sind zu hoch.",
   "choices": [
     "運費太高了。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "請給我一張到機場的票。",
+    "我需要一輛計程車。"
   ],
   "answer": 0
 },
@@ -1020,8 +1020,8 @@
   "text": "Kann ich in Raten zahlen?",
   "choices": [
     "我能分期付款嗎？",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我每天運動。",
+    "你能給我收據嗎？"
   ],
   "answer": 0
 },
@@ -1029,8 +1029,8 @@
   "text": "Gibt es einen Studentenrabatt?",
   "choices": [
     "有學生折扣嗎？",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "你喜歡吃軟煮蛋還是硬煮蛋？",
+    "我每個月洗一次窗簾。"
   ],
   "answer": 0
 },
@@ -1038,8 +1038,8 @@
   "text": "Wo ist die nächste Bushaltestelle?",
   "choices": [
     "最近的公車站在哪裡？",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "馬鈴薯煎餅很好吃。",
+    "今晚我們吃烤雞配米飯和綠花菜。"
   ],
   "answer": 0
 },
@@ -1047,8 +1047,8 @@
   "text": "Eine Fahrkarte zum Flughafen, bitte.",
   "choices": [
     "請給我一張到機場的票。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "今晚我們吃烤雞配米飯和綠花菜。",
+    "早餐是一天中最重要的餐點。"
   ],
   "answer": 0
 },
@@ -1056,8 +1056,8 @@
   "text": "Mein Auto braucht Benzin.",
   "choices": [
     "我的車需要加油。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我的喉嚨很痛。",
+    "你喜歡穿牛仔褲還是西裝褲？"
   ],
   "answer": 0
 },
@@ -1065,8 +1065,8 @@
   "text": "Der Zug hat Verspätung.",
   "choices": [
     "火車晚點了。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "裙子太長了，我要縮短。",
+    "你晚餐喜歡吃香腸還是肉丸？"
   ],
   "answer": 0
 },
@@ -1074,8 +1074,8 @@
   "text": "Ich brauche ein Taxi.",
   "choices": [
     "我需要一輛計程車。",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "請給我一張到機場的票。",
+    "我想要一個漢堡配薯條。"
   ],
   "answer": 0
 },
@@ -1083,8 +1083,8 @@
   "text": "Wie komme ich zum Bahnhof?",
   "choices": [
     "我怎麼去火車站？",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我每天刷牙兩次。",
+    "你喜歡吃辣嗎？這咖哩很辛辣。"
   ],
   "answer": 0
 },
@@ -1092,8 +1092,8 @@
   "text": "Kann ich hier parken?",
   "choices": [
     "我能停車嗎？",
-    "這個翻譯不對。",
-    "不是這個意思。"
+    "我用吹風機吹乾頭髮。",
+    "可頌和熱咖啡很搭。"
   ],
   "answer": 0
 },
@@ -1101,8 +1101,8 @@
   "text": "Die Autobahn ist heute sehr voll.",
   "choices": [
     "今天的高速公路很擁擠。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我晚餐煮湯。",
+    "今天午餐菜單是什麼？看起來很好吃。"
   ],
   "answer": 0
 },
@@ -1110,8 +1110,8 @@
   "text": "Ich möchte eine Monatskarte kaufen.",
   "choices": [
     "我想買月票。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "這牛排太生了，服務員能再把它放回烤架嗎？",
+    "吃完飯後我洗碗盤。"
   ],
   "answer": 0
 },
@@ -1119,8 +1119,8 @@
   "text": "Wie lange dauert die Fahrt?",
   "choices": [
     "車程要多久？",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "今天午餐菜單是什麼？看起來很好吃。",
+    "我頭痛，能給我一顆藥嗎？"
   ],
   "answer": 0
 },
@@ -1128,8 +1128,8 @@
   "text": "Ich bin krank und möchte einen Termin beim Arzt machen.",
   "choices": [
     "我生病了，想預約看醫生。",
-    "這是另一個句子。",
-    "不是這個意思。"
+    "我每個月洗一次窗簾。",
+    "我每天運動。"
   ],
   "answer": 0
 },
@@ -1137,8 +1137,8 @@
   "text": "Ich habe Kopfschmerzen, kann ich eine Tablette haben?",
   "choices": [
     "我頭痛，能給我一顆藥嗎？",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "我每天運動。",
+    "我能要一條毛巾嗎？"
   ],
   "answer": 0
 },
@@ -1146,8 +1146,8 @@
   "text": "Der Hals tut mir sehr weh.",
   "choices": [
     "我的喉嚨很痛。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "我的牙刷丟了，我要買一把新的。",
+    "我早上沒時間，所以不吃早餐。"
   ],
   "answer": 0
 },
@@ -1155,8 +1155,8 @@
   "text": "Ich brauche einen Verband für die Wunde.",
   "choices": [
     "我需要繃帶包紮傷口。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "這太貴了，沒有更便宜的嗎？",
+    "我需要衛生紙。我在哪裡可以買到？"
   ],
   "answer": 0
 },
@@ -1164,8 +1164,8 @@
   "text": "Ich mache täglich Sport.",
   "choices": [
     "我每天運動。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "蔬菜還太硬，你能再煮久一點嗎？",
+    "我每個月洗一次窗簾。"
   ],
   "answer": 0
 },
@@ -1173,8 +1173,8 @@
   "text": "Ich bin allergisch gegen Erdnüsse.",
   "choices": [
     "我對花生過敏。",
-    "不是這個意思。",
-    "這個翻譯不對。"
+    "鏡子起霧了，我擦一下。",
+    "吃完飯後我洗碗盤。"
   ],
   "answer": 0
 },
@@ -1182,8 +1182,8 @@
   "text": "Ich nehme Medikamente gegen Bluthochdruck.",
   "choices": [
     "我吃血壓藥。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "這個肥皂很滋潤皮膚。",
+    "塗花生醬的麵包是我的最愛。"
   ],
   "answer": 0
 },
@@ -1191,8 +1191,8 @@
   "text": "Die Grippe ist schlimm in dieser Saison.",
   "choices": [
     "這個季節流感很嚴重。",
-    "這個翻譯不對。",
-    "這是另一個句子。"
+    "甜點我要巧克力蛋糕配香草冰淇淋。",
+    "這太貴了，沒有更便宜的嗎？"
   ],
   "answer": 0
 },
@@ -1200,8 +1200,8 @@
   "text": "Ich war beim Zahnarzt, um meine Zähne zu putzen.",
   "choices": [
     "我去牙醫診所洗牙。",
-    "這是另一個句子。",
-    "這個翻譯不對。"
+    "不好意思，廁所在哪裡？",
+    "有退貨保證嗎？"
   ],
   "answer": 0
 },
@@ -1209,8 +1209,8 @@
   "text": "Ich bin diabetisch, daher esse ich keinen Zucker.",
   "choices": [
     "我是糖尿病患者，所以不吃糖。",
-    "不是這個意思。",
-    "這是另一個句子。"
+    "我早餐喜歡喝柳橙汁。",
+    "我想要一份清淡的晚餐。"
   ],
   "answer": 0
 }
